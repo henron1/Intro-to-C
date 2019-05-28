@@ -9,7 +9,12 @@
 */
 int string_length(char *s)
 {
-
+    int counter = 0;
+    while(*s != '\0') {
+        counter++;
+        s++;
+    }
+    return counter;
 }
 
 /*
@@ -20,7 +25,14 @@ int string_length(char *s)
 */
 char *reverse_string(char *rv, char *s)
 {
-
+    int i;
+    int length = string_length(s);
+    int end_index = length - 1;
+    for(i = 0; i < length; i++) {
+        rv[i] = s[end_index];
+        end_index--;
+    }
+    return rv;
 }
 
 #ifndef TESTING
