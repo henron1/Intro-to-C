@@ -21,7 +21,9 @@ typedef struct Person {
 */
 Person *createPerson(char *name, int age, int height, int weight)
 {
+struct Person *p = malloc(sizeof(struct Person));
 
+return p;
 }
 
 /*
@@ -30,7 +32,7 @@ Person *createPerson(char *name, int age, int height, int weight)
 */
 void destroyPerson(Person *who)
 {
-
+    free(who);
 }
 
 #ifndef TESTING
