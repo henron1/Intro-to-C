@@ -15,7 +15,14 @@
 */
 void string_copy(char *x, char *y)
 {
-
+    // printf("y is equal to %c\n ", x);
+    while (*y != '\0') {
+        *x = *y;
+        x++;
+        y++;
+    }
+    *x = '\0';
+    // while ((*x++ = *y++) != '\0');
 }
 
 /*
@@ -28,7 +35,14 @@ void string_copy(char *x, char *y)
 */
 char *find_char(char *str, int c)
 {
-
+    while(*str){
+        if (*str == c) {
+            return str;
+        } else {
+            str++;
+        }
+    }
+    return 0;
 }
 
 /*
